@@ -1,0 +1,72 @@
+[04-Jan-2026 23:56:33 America/Boise] PHP Warning:  Undefined array key "companyName" in /home3/nilongro/public_html/emergine/tiles/index.php on line 39
+[04-Jan-2026 23:56:35 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.approvesales' doesn't exist in /home3/nilongro/public_html/emergine/tiles/home.php:289
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/home.php(289): mysqli_query(Object(mysqli), 'select * from a...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/home.php on line 289
+[04-Jan-2026 23:56:47 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_item' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-item.php:236
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-item.php(236): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-item.php on line 236
+[04-Jan-2026 23:56:55 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_production' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-production.php:241
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-production.php(241): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-production.php on line 241
+[04-Jan-2026 23:57:12 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_companygroup' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-company-group.php:262
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-company-group.php(262): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-company-group.php on line 262
+[04-Jan-2026 23:57:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_brand' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-brand.php:255
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-brand.php(255): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-brand.php on line 255
+[04-Jan-2026 23:59:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_mrp' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-mrp.php:221
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-mrp.php(221): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-mrp.php on line 221
+[04-Jan-2026 23:59:12 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_mrp' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-mrp.php:221
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-mrp.php(221): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-mrp.php on line 221
+[04-Jan-2026 23:59:26 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_production' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-production.php:241
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-production.php(241): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-production.php on line 241
+[04-Jan-2026 23:59:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_brand' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-brand.php:255
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-brand.php(255): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-brand.php on line 255
+[04-Jan-2026 23:59:52 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_brand' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-brand.php:255
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-brand.php(255): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-brand.php on line 255
+[05-Jan-2026 00:00:19 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: session_unset() expects exactly 0 arguments, 1 given in /home3/nilongro/public_html/emergine/tiles/logout.php:3
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/logout.php(3): session_unset('admin')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/logout.php on line 3
+[05-Jan-2026 00:04:29 America/Boise] PHP Warning:  Undefined array key "companyName" in /home3/nilongro/public_html/emergine/tiles/index.php on line 39
+[05-Jan-2026 00:04:31 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.approvesales' doesn't exist in /home3/nilongro/public_html/emergine/tiles/home.php:289
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/home.php(289): mysqli_query(Object(mysqli), 'select * from a...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/home.php on line 289
+[05-Jan-2026 00:04:50 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_brand' doesn't exist in /home3/nilongro/public_html/emergine/tiles/add-brand.php:190
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/add-brand.php(190): mysqli_query(Object(mysqli), 'INSERT INTO t_b...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/add-brand.php on line 190
+[05-Jan-2026 00:05:08 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nilongro_swastik.t_brand' doesn't exist in /home3/nilongro/public_html/emergine/tiles/view-brand.php:255
+Stack trace:
+#0 /home3/nilongro/public_html/emergine/tiles/view-brand.php(255): mysqli_query(Object(mysqli), 'select * from t...')
+#1 {main}
+  thrown in /home3/nilongro/public_html/emergine/tiles/view-brand.php on line 255

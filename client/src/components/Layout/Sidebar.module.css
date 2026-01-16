@@ -1,0 +1,111 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #1e293b;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.brand {
+    padding: 1.5rem;
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    color: #cbd5e1;
+    transition: all 0.2s;
+    margin-bottom: 0.25rem;
+}
+
+.link:hover {
+    background-color: #334155;
+    color: white;
+}
+
+.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.active:hover {
+    background-color: var(--primary-hover);
+}
+
+.group {
+    margin-bottom: 0.5rem;
+}
+
+.groupLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: all 0.2s;
+}
+
+.groupLabel:hover {
+    background-color: #334155;
+    color: white;
+}
+
+.subnav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding-left: 0.5rem;
+}
+
+.expanded {
+    max-height: 1000px;
+    /* Large enough to fit content */
+}
+
+.footer {
+    padding: 1rem;
+    border-top: 1px solid #334155;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    color: #cbd5e1;
+    border: none;
+    border-radius: var(--radius);
+    text-align: left;
+}
+
+.logoutBtn:hover {
+    background-color: #ef4444;
+    color: white;
+}
