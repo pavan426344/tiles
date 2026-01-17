@@ -1,59 +1,50 @@
-# Node.js/Express Backend Migration
+# Tiles Project
 
-## Project Overview
-This repository contains the migrated backend code, converting the original PHP logic to Node.js with Express. It preserves all API endpoints to ensure full compatibility with the existing frontend.
+This project consists of a PHP frontend and a Node.js backend. The following instructions will guide you through setting up and running the project locally.
 
 ## Prerequisites
-* Node.js (v18+)
-* npm or yarn
-* Docker and Docker Compose
 
-## Installation
+- Docker and Docker Compose
+- A modern web browser
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [repo_url]
-    cd [project_name]
-    ```
+## How to Run the Project
 
-2.  **Environment Setup:**
-    Create a `.env` file in the `backend` directory:
-    ```env
-    PORT=3000
-    DB_HOST=localhost
-    DB_USER=root
-    DB_PASS=password
-    DB_NAME=database_name
-    JWT_SECRET=your_secret_key
-    ```
+1.  **Clone the repository.**
 
-## Running the Application (without Docker)
+2.  **Set up the environment variables:**
+    -   Navigate to the `backend` directory.
+    -   Create a copy of the `.env.example` file and name it `.env`.
+    -   Review the variables in the `.env` file and make any necessary changes. The default values should work for a local setup.
 
-* **Navigate to the `backend` directory:** `cd backend`
-* **Install dependencies:** `npm install`
-* **Development:** `npm run dev`
-* **Production:** `npm start`
+3.  **Start the application:**
+    -   Open a terminal in the root directory of the project.
+    -   Run the following command to start the backend and database containers:
+        ```bash
+        sudo docker compose up -d
+        ```
 
-## Running the Application (with Docker)
+4.  **Set up the database:**
+    -   The first time you start the application, you will need to set up the database. Run the following commands in the root directory of the project:
+        ```bash
+        sudo docker exec -i app-db-1 mysql -uroot -ppassword -e "CREATE DATABASE IF NOT EXISTS tiles;"
+        sudo docker exec -i app-db-1 mysql -uroot -ppassword tiles < nilongro_swastik.sql
+        sudo docker compose exec backend node scripts/add_password_column.js
+        sudo docker compose exec backend node scripts/hash_passwords.js
+        ```
 
-1.  **Build and run the containers:**
-    ```bash
-    docker-compose up -d
-    ```
+5.  **Start the PHP frontend:**
+    -   Run the following command in the root directory of the project to start the PHP development server:
+        ```bash
+        php -S 0.0.0.0:8080 > php.log 2>&1 &
+        ```
 
-## Database Migration
+6.  **Access the application:**
+    -   Open your web browser and navigate to `http://localhost:8080`.
 
-After running the application for the first time, you need to run the database migration scripts to update the database schema and hash the existing passwords.
+## Stopping the Application
 
-1.  **Run the `add_password_column.js` script:**
-    ```bash
-    docker-compose exec backend node scripts/add_password_column.js
-    ```
+To stop the application, run the following command in the root directory of the project:
 
-2.  **Run the `hash_passwords.js` script:**
-    ```bash
-    docker-compose exec backend node scripts/hash_passwords.js
-    ```
-
-## API Documentation
-All endpoints mirror the original PHP backend. No frontend changes are required.
+```bash
+sudo docker compose down
+```
