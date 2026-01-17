@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const ProfileSetting = require('../models/profileSetting');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -17,7 +18,9 @@ exports.login = async (req, res, next) => {
       return res.status(401).send({ auth: false, token: null });
     }
 
-    const token = jwt.sign({ id: user.userlogin_id, usertype: user.UserType }, process.env.JWT_SECRET, {
+    const permissions = await ProfileSetting.findByUsername(username);
+
+    const token = jwt.sign({ id: user.userlogin_id, usertype: user.UserType, permissions }, process.env.JWT_SECRET, {
       expiresIn: 86400, // expires in 24 hours
     });
 
