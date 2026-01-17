@@ -23,12 +23,13 @@ exports.getBrandById = async (req, res, next) => {
 
 exports.createBrand = async (req, res, next) => {
   try {
-    const newBrand = {
+    const newBrandData = {
       T_Brand_Name: req.body.brand_name,
       C_Date: new Date(),
     };
-    const brandId = await Brand.create(newBrand);
-    res.status(201).send({ id: brandId, ...newBrand });
+    const brandId = await Brand.create(newBrandData);
+    const newBrand = { T_Brand_Id: brandId, ...newBrandData };
+    res.status(201).send(newBrand);
   } catch (err) {
     next(err);
   }
@@ -36,11 +37,12 @@ exports.createBrand = async (req, res, next) => {
 
 exports.updateBrand = async (req, res, next) => {
   try {
-    const updatedBrand = {
+    const updatedBrandData = {
       T_Brand_Name: req.body.brand_name,
     };
-    await Brand.update(req.params.id, updatedBrand);
-    res.status(200).send({ message: 'Brand updated successfully.' });
+    await Brand.update(req.params.id, updatedBrandData);
+    const updatedBrand = { T_Brand_Id: req.params.id, ...updatedBrandData };
+    res.status(200).send(updatedBrand);
   } catch (err) {
     next(err);
   }
